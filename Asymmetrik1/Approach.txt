@@ -1,0 +1,17 @@
+I focused on business cards using common english words and names. Although this should work reasonably well for foreign cards using the 
+same alphabet, it can be improved for use on foreign language business cards by using an appropriate word and name file.
+
+I searched around a little and did see that some people were using NLP. I considered this, but it's not clear to me that this would be
+much better than using a list of names, since business cards contain minimal linguistic context. I thought about how I was determining
+which fields represented which data in the examples, and in other examples I could think of. What I determined was this:
+
+I know what an email address looks like. This is, in fact, the easiest field to identify.
+
+I know what phone numbers look like, but they do look the same as fax numbers, so I look for the word "fax" or the letter "f" to filter.
+
+I use my knowledge of common names to determine that "mike" might be a name, but "technical" is not.
+However, in some cases (e.g. Edward Jones working at Charles Schwab) I can't tell from the names alone which is the person's name and
+which is the company name. In this case, I look at the email address. The email address is very helpful, because the local part often
+contains some part of the person's name, and the domain often contains some part of the company name.
+
+So I built my program to analyze cards in a way that is similar to the way I do.
